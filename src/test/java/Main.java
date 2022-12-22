@@ -1,5 +1,3 @@
-package org.example;
-
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -8,9 +6,10 @@ import java.util.Date;
 import java.util.Locale;
 
 
-@Test
+
 public class Main {
-    public static void main(String[] args) {
+    @Test
+    public static void main() {
         System.out.println(addAmountToCurrentMinuteInReminder(1));
         System.out.println(getTimeHourToString());
     }
