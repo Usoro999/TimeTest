@@ -11,7 +11,7 @@ public class MainTest {
         local();
         System.out.println("_______________________________________________");
 
-        System.out.println("Print minute + 1: "+addAmountToCurrentMinuteInReminder(1));
+        System.out.println("Print minute + one minute: "+addAmountToCurrentMinuteInReminder(1));
         System.out.println("Print hour: "+getTimeHourToString());
 
         System.out.println("___________________________________________");
