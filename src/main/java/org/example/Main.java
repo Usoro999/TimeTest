@@ -1,25 +1,32 @@
-import org.testng.annotations.Test;
+package org.example;
+
+
 
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 
-
 public class Main {
-    @Test
-    public static void main() {
-        System.out.println(addAmountToCurrentMinuteInReminder(1));
-        System.out.println(getTimeHourToString());
+
+
+    public static void main(String[] args) {
+        local();
+        //System.out.println(addAmountToCurrentMinuteInReminder(1));
+        //System.out.println(getTimeHourToString());
     }
 
-    public static String addAmountToCurrentMinuteInReminder(int amountAdd) {
+
+
+   /* public static String addAmountToCurrentMinuteInReminder(int amountAdd) {
         Calendar calendar = Calendar.getInstance();// get current date
 
         calendar.add(Calendar.MINUTE, amountAdd); // add needed number of minutes
         Date date = new Date();
-        System.out.println("Curent date:     " +date);
+        System.out.println("Curent date:     " + date);
         Date currentTimePlus = calendar.getTime();
         System.out.println("Date + 1 minute: " + currentTimePlus);
         int minute = currentTimePlus.getMinutes(); // get updated minute
@@ -52,5 +59,16 @@ public class Main {
             return Integer.toString(hour);
         }
         return null;
+    }
+    */
+    public static void local(){
+        LocalTime now = LocalTime.now();
+        System.out.println(now);
+        LocalTime n = now.plusMinutes(1);
+        System.out.println(n.getMinute());
+        int m = now.getMinute();
+        String a = now.format(DateTimeFormatter.ofPattern("hh"));
+        System.out.println(a +" "+ m);
+
     }
 }
