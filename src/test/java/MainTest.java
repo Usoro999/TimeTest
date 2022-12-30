@@ -33,7 +33,7 @@ public class MainTest {
         Date currentTimePlus = calendar.getTime();
         System.out.println("Date + 1 minute: " + currentTimePlus);
         int minute = currentTimePlus.getMinutes(); // get updated minute
-        System.out.println("Minute +one minute: " + minute);
+
         if (minute < 10) {
             return "0" + minute;
         }
